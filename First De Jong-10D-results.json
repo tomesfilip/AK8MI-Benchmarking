@@ -2,181 +2,181 @@
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 7.67969099235488e-11
+        "Dimensions": 10,
+        "Best Value": 4.092465030153853e-14
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 2.501445379481481e-10
+        "Dimensions": 10,
+        "Best Value": 1.0575708252657245e-12
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 4.193774955743107e-10
+        "Dimensions": 10,
+        "Best Value": 2.085716059930034e-11
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 5.334507625950607e-10
+        "Dimensions": 10,
+        "Best Value": 4.4085626915359567e-11
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 5.842649356621084e-10
+        "Dimensions": 10,
+        "Best Value": 9.082061669346469e-11
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 7.180664472045973e-10
+        "Dimensions": 10,
+        "Best Value": 2.7281489427595237e-10
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 7.994038716546129e-10
+        "Dimensions": 10,
+        "Best Value": 3.4354834862912376e-10
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 9.965375851224668e-10
+        "Dimensions": 10,
+        "Best Value": 5.178375157778354e-10
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.5677590104589573e-09
+        "Dimensions": 10,
+        "Best Value": 6.494377497161611e-10
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "First De Jong",
+        "Dimensions": 10,
+        "Best Value": 1.7914677070353606e-09
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "First De Jong",
+        "Dimensions": 10,
+        "Best Value": 1.8548509713538635e-09
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "First De Jong",
+        "Dimensions": 10,
+        "Best Value": 3.896331636541836e-09
     },
     {
         "Algorithm": "Random Search",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.8252983447428573e-09
+        "Dimensions": 10,
+        "Best Value": 3.948644548934731e-09
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 4.4366491544293645e-09
+        "Dimensions": 10,
+        "Best Value": 5.262907100611042e-09
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 6.203310740470089e-09
+        "Dimensions": 10,
+        "Best Value": 6.748327183008383e-09
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 6.757144914644102e-09
+        "Dimensions": 10,
+        "Best Value": 9.218012338029851e-09
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 7.451017541103234e-09
+        "Dimensions": 10,
+        "Best Value": 1.9433151964249666e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.0010004322147628e-08
+        "Dimensions": 10,
+        "Best Value": 1.9797782214846724e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.0142284557071687e-08
-    },
-    {
-        "Algorithm": "Random Search",
-        "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.0865713145795034e-08
+        "Dimensions": 10,
+        "Best Value": 1.9838814968695906e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.3831482953652245e-08
+        "Dimensions": 10,
+        "Best Value": 2.0449075611354315e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 2.226472506375461e-08
+        "Dimensions": 10,
+        "Best Value": 3.061275248043315e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 2.5466846572321134e-08
+        "Dimensions": 10,
+        "Best Value": 3.155536274490282e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 3.098972070858182e-08
+        "Dimensions": 10,
+        "Best Value": 3.5425711401514237e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 3.6665086930585077e-08
+        "Dimensions": 10,
+        "Best Value": 4.4185466340312035e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 4.911825580968719e-08
+        "Dimensions": 10,
+        "Best Value": 5.183153234337852e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 4.928756244257535e-08
+        "Dimensions": 10,
+        "Best Value": 5.357349319585348e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 5.510438044744955e-08
+        "Dimensions": 10,
+        "Best Value": 5.495801129212849e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 5.871037406083369e-08
+        "Dimensions": 10,
+        "Best Value": 9.674628632659545e-08
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 6.945728557229479e-08
+        "Dimensions": 10,
+        "Best Value": 1.0390069535461192e-07
     },
     {
         "Algorithm": "Simulated Annealing",
         "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 7.244492327395233e-08
-    },
-    {
-        "Algorithm": "Simulated Annealing",
-        "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 8.470783950243548e-08
-    },
-    {
-        "Algorithm": "Simulated Annealing",
-        "Test Function": "First De Jong",
-        "Dimensions": 5,
-        "Best Value": 1.0181520110456613e-07
+        "Dimensions": 10,
+        "Best Value": 1.3981798818681878e-07
     }
 ]

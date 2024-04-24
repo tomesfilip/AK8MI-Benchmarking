@@ -1,12 +1,13 @@
 import json
 
+import numpy as np
 from numpy import asarray
 
 from algorithms import *
 from testFunctions import *
 
 INPUT_DOMAIN = ([-100, 100], [-100, 100])  # Used for plotting
-DIMENSIONS = 5  # Possible values: 5, 10
+DIMENSIONS = 10  # Possible values: 5, 10
 REPETITIONS = 30
 FES_LIMIT = 10000
 
@@ -55,9 +56,28 @@ for func in bench_functions:
         })
 
     data_sorted = sorted(data, key=lambda x: x["Best Value"])
-    filename = f"{func.name}_{DIMENSIONS}D_results.json"
+    top_30_results = data_sorted[:30]
 
-    with open(filename, 'w') as f:
-        json.dump(data_sorted[:30], f, indent=4)
+    results_filename = f"{func.name}-{DIMENSIONS}D-results.json"
+    calculations_filename = f"{func.name}-{DIMENSIONS}D-calculations.json"
 
-    print(f"Results saved to: {filename}")
+    values = []
+    for result in top_30_results:
+        values.append(result["Best Value"])
+
+    calculations = {
+        "Dimensions": DIMENSIONS,
+        "Min": min(values),
+        "Max": max(values),
+        "Mean": np.mean(values),
+        "Median": np.median(values),
+        "Standard Deviation": np.std(values)
+    }
+
+    with open(results_filename, 'w') as f:
+        json.dump(top_30_results, f, indent=4)
+    print(f"Results saved to: {results_filename}")
+
+    with open(calculations_filename, 'w') as f:
+        json.dump(calculations, f, indent=4)
+    print(f"Calculations saved to: {calculations_filename}")
