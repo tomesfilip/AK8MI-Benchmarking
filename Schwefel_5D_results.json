@@ -1,0 +1,182 @@
+[
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 394.89993978107753
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837471574
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983747288
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983747306
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837473797
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983747461
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983747473
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837475474
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983747855
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983748139
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983748581
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983748856
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983749509
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837496114
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983750102
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837521676
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983753377
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759837543436
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983754479
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983768802
+    },
+    {
+        "Algorithm": "Random Search",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983778843
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983783282
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983793088
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759838138814
+    },
+    {
+        "Algorithm": "Random Search",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983827448
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759838363027
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983847479
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.03759838502873
+    },
+    {
+        "Algorithm": "Simulated Annealing",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983854505
+    },
+    {
+        "Algorithm": "Random Search",
+        "Test Function": "Schwefel",
+        "Dimensions": 5,
+        "Best Value": 415.0375983864633
+    }
+]
