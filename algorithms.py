@@ -1,99 +1,60 @@
-from numpy import exp
-from numpy.random import randn
-from numpy.random import rand
-
-"""
-Pseudocode for random search:
-
-Best -> some initial random candidate solution
-repeat
-    S -> a random candidate solution
-    if Quality(S) > Quality(Best) then
-        Best -> S
-until Best is the ideal solution or we have run out of time
-return Best
-
-"""
+import numpy as np
 
 
-def random_search(objective_function, bounds, n_iterations, fes_limit):
-    best = None
-    best_eval = float('inf')
-    fes_count = 0
+def random_search(objective_function, bounds, dimension, iterations):
+    best_solution = np.random.uniform(bounds[0], bounds[1], dimension)
+    best_value = objective_function(best_solution)
     outputs = []
 
-    for i in range(n_iterations):
-        candidate = bounds[:, 0] + rand(len(bounds)) * (bounds[:, 1] - bounds[:, 0])
-        candidate_eval = objective_function(candidate)
-        fes_count += 1
+    for _ in range(iterations):
+        candidate = np.random.uniform(bounds[0], bounds[1], dimension)
+        candidate_value = objective_function(candidate)
 
-        if candidate_eval < best_eval:
-            best, best_eval = candidate, candidate_eval
-            outputs.append(best_eval)
+        if candidate_value < best_value:
+            best_solution, best_value = candidate, candidate_value
 
-        if fes_count >= fes_limit:
-            break
+        outputs.append(best_value)
 
-    return best, best_eval, outputs
+    return best_solution, best_value, outputs
 
 
-"""
-Pseudocode for simulated annealing
-t -> temperature, initially a high number
-S -> some initial candidate solution
-Best -> S
+def simulated_annealing(objective_function, bounds, dimension, iterations,
+                        temp_max=1000, temp_min=0.01, cooling_decr=0.98, metropolis_steps=10):
+    best_solution = np.random.uniform(bounds[0], bounds[1], dimension)
+    best_value = objective_function(best_solution)
+    outputs = [best_value]
 
-repeat
-    R -> Tweak(Copy(S))
-    if Quality(R) > Quality(S) or if a random number chosen from 0 to 1 < e^(Quality(R)-Quality(S) / t) then
-        S -> R
-    Decrease t
-    if Quality(S) > Quality(Best) then
-        Best -> S
-until Best is the ideal solution, we have run out of time, or t <= 0
-return Best
+    def metropolis(curr_val, candidate_val, temp):
+        delta = candidate_val - curr_val
+        if delta < 0:
+            return True
+        else:
+            probability = np.exp(-delta / temp)
+            return np.random.rand() < probability
 
-the rate at which we decrease t is called the algorithm's schedule. The longer we stretch out the schedule,
-the longer the algorithm resembles a random walk and the more exploration it does    
+    def generate_neighbor(solution, step_size, neigh_bounds):
+        neighbor = solution + np.random.uniform(-step_size, step_size, size=dimension)
+        neighbor = np.clip(neighbor, neigh_bounds[0], neigh_bounds[1])
+        return neighbor
 
-"""
+    temperature = temp_max
+    for _ in range(iterations):
+        temperature = max(temperature * cooling_decr, temp_min)
 
+        while temperature > temp_min:
+            for _ in range(metropolis_steps):
+                current_solution = best_solution
+                current_value = best_value
+                neighbor_solution = generate_neighbor(current_solution, step_size=0.1, neigh_bounds=bounds)
+                neighbor_value = objective_function(neighbor_solution)
 
-# simulated annealing algorithm
-def simulated_annealing(objective_function, bounds, n_iterations, step_size, temp, fes_limit):
-    # generate an initial point
-    best = bounds[:, 0] + rand(len(bounds)) * (bounds[:, 1] - bounds[:, 0])
-    # evaluate the initial point
-    best_eval = objective_function(best)
-    # current working solution
-    curr, curr_eval = best, best_eval
-    fes_count = 0
-    outputs = []
+                if metropolis(current_value, neighbor_value, temperature):
+                    current_solution, current_value = neighbor_solution, neighbor_value
 
-    for i in range(n_iterations):
-        if fes_count >= fes_limit:
-            break
-        # take a step
-        candidate = curr + randn(len(bounds)) * step_size
-        # evaluate candidate point
-        candidate_eval = objective_function(candidate)
-        fes_count += 2
-        # check for new best solution
-        if candidate_eval < best_eval:
-            outputs.append(best_eval)
-            # store new best point
-            best, best_eval = candidate, candidate_eval
-            # difference between candidate and current point evaluation
-            diff = candidate_eval - curr_eval
-            # calculate temperature for current epoch
-            t = temp / float(i + 1)
-            # calculate metropolis acceptance criterion
-            metropolis = exp(-diff / t)
-            # check if we should keep the new point
-            if diff < 0 or rand() < metropolis:
-                fes_count += 1
-                # store the new current point
-                curr, curr_eval = candidate, candidate_eval
-    return best, best_eval, outputs
+                    if current_value < best_value:
+                        best_solution, best_value = current_solution, current_value
 
+            temperature *= cooling_decr
+            outputs.append(best_value)
 
+    return best_solution, best_value, outputs
