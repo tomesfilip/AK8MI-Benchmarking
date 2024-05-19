@@ -22,8 +22,14 @@ def run_experiment(algorithm, objective_function, dimension, bounds, iterations,
 
     average_convergence = np.mean(results, axis=0)
 
-    plot_convergence_all(results, algorithm["title"], objective_function.__name__)
-    plot_average_convergence(average_convergence, algorithm["title"], objective_function.__name__)
+    plot_convergence_all(data=results,
+                         dimension=dimension,
+                         algo_name=algorithm["title"],
+                         test_function_name=objective_function.__name__)
+    plot_average_convergence(data=average_convergence,
+                             dimension=dimension,
+                             algo_name=algorithm["title"],
+                             test_function_name=objective_function.__name__)
 
     return results, average_convergence
 
@@ -59,6 +65,7 @@ def main():
                 stats_list.append(stats)
 
             plot_average_convergence_comparison(data=avg_convergences,
+                                                dimension=dimension,
                                                 test_function_name=objective_function["func"].__name__)
             compare_stats(stats_list)
 

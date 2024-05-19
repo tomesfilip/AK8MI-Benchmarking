@@ -19,9 +19,13 @@ def random_search(objective_function, bounds, dimension, iterations):
 
 
 def simulated_annealing(objective_function, bounds, dimension, iterations,
-                        temp_max=1000, temp_min=0.01, cooling_decr=0.98, metropolis_steps=10):
-    best_solution = np.random.uniform(bounds[0], bounds[1], dimension)
-    best_value = objective_function(best_solution)
+                        temp_max=1000, temp_min=0.01, cooling_decr=0.994, metropolis_steps=20, step_size=0.1):
+    current_solution = np.random.uniform(bounds[0], bounds[1], dimension)
+    current_value = objective_function(current_solution)
+
+    best_solution = current_solution.copy()
+    best_value = current_value
+
     outputs = [best_value]
 
     def metropolis(curr_val, candidate_val, temp):
@@ -39,22 +43,17 @@ def simulated_annealing(objective_function, bounds, dimension, iterations,
 
     temperature = temp_max
     for _ in range(iterations):
+        for _ in range(metropolis_steps):
+            neighbor_solution = generate_neighbor(current_solution, step_size, bounds)
+            neighbor_value = objective_function(neighbor_solution)
+
+            if metropolis(current_value, neighbor_value, temperature):
+                current_solution, current_value = neighbor_solution, neighbor_value
+
+                if neighbor_value < best_value:
+                    best_solution, best_value = neighbor_solution, neighbor_value
+
         temperature = max(temperature * cooling_decr, temp_min)
-
-        while temperature > temp_min:
-            for _ in range(metropolis_steps):
-                current_solution = best_solution
-                current_value = best_value
-                neighbor_solution = generate_neighbor(current_solution, step_size=0.1, neigh_bounds=bounds)
-                neighbor_value = objective_function(neighbor_solution)
-
-                if metropolis(current_value, neighbor_value, temperature):
-                    current_solution, current_value = neighbor_solution, neighbor_value
-
-                    if current_value < best_value:
-                        best_solution, best_value = current_solution, current_value
-
-            temperature *= cooling_decr
-            outputs.append(best_value)
+        outputs.append(best_value)
 
     return best_solution, best_value, outputs
